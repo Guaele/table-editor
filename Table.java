@@ -106,14 +106,19 @@ public class Table{
 		set_table(aux);
 	}
 	public void print(){
-		String[][] aux = get_table();
-
 		for(int i = 0; i < get_row(); i++){
 			for(int j = 0; j < get_col(); j++){
-				System.out.print(aux[i][j]);
+				System.out.print(get_elem(i, j));
 				System.out.print(" ");
 			}
 			System.out.println("");
 		}
+	}
+	public void print(int a, int b){
+		System.out.println(get_elem(a-1, b-1));
+	}
+	private String get_elem(int a, int b){
+		String[][] aux = get_table();
+		return aux[a][b];
 	}
 }
