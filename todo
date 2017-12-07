@@ -1,0 +1,18 @@
+---insert should insert new rows if user wants to.
+
+	example:
+
+ 		1, 2|
+		3, 4|
+		
+	insert 3 1 newElem
+	
+		1, 2|
+		3, 4|
+		new Elem, |
+
+	insert 3 2 other
+	
+		1, 2|
+		3, 4|
+		new Elem, other|
