@@ -16,3 +16,11 @@
 		1, 2|
 		3, 4|
 		new Elem, other|
+
+--- Need to take care of empty spaces if row or col added.
+
+--- Save table in file.
+
+--- Able to create tables from start.
+
+--- User chooses if it wants to start a new table or to load a file.
