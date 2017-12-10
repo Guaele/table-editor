@@ -15,7 +15,9 @@ public class Table{
 	
 	public static Table table_init_from_file(String file_name){
 		try{ 	//reads file
-			BufferedReader reader = new BufferedReader(new FileReader(new File(file_name)));
+			file_name = file_name.trim();	
+			File f = new File(file_name);
+			BufferedReader reader = new BufferedReader(new FileReader(file_name));
 			String line;
 			String text = "";
 			int col, row;

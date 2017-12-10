@@ -1,0 +1,10 @@
+	☐	insert should insert new rows if user wants to.
+
+	 ☐	Need to take care of empty spaces if row or col added.
+
+	☐	Save table in file.
+
+	✔	Able to create tables from start. @done (17-12-10 15:26)
+
+	 ✔	User chooses if it wants to start a new table or to load a file. @done (17-12-10 15:26)
+
