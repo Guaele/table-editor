@@ -36,7 +36,7 @@ public class Table{
 		
 			Table t = new Table(row, col);
 			t.populate(text);
-
+			
 			return t;
 		}catch(IOException e){
 			System.out.println("File doesn't exist.");
@@ -62,6 +62,19 @@ public class Table{
 		
 		
 	}
+	private String[][] populate(String[][] a, String[][] b){
+		System.out.println(col + "     " + row );
+		for(int i = 0; i < get_row(); i++){
+			for(int j = 0; j < get_col(); j++){
+				a[i][j] = b[i][j];
+				
+			}
+		}
+		
+		return a;
+	}
+	
+
 	private String[] read_elements(String text){
 		String aux[] = new String[get_col() * get_row()];
 		int i = 0;
@@ -99,19 +112,41 @@ public class Table{
 	}
 	public void insert(int a, int b, String s){
 		String[][] aux = get_table();
+		//Add a row to the table if needed.
+		if(a > get_row()){
+			String[][] temp = new String[a][get_col()];
+			aux = populate(temp, aux);
+			this.row = a;
+			set_table(temp);
+		} 	
+		if(b > get_col()){
+		System.out.println("No 2");	
+			String[][] temp = new String[get_row()][b];
+			aux = populate(temp, aux);
+			this.col = b;
+			set_table(temp);
+		}
 		aux[a-1][b-1] = s;
 		set_table(aux);
+		print();
 	}
+	
 	public void remove(int a, int b){
 		String[][] aux = get_table();
 		aux[a-1][b-1] = "";
 		set_table(aux);
+		print();
 	}
 	public void print(){
 		for(int i = 0; i < get_row(); i++){
 			for(int j = 0; j < get_col(); j++){
+				if(get_elem(i, j) == null){
+					System.out.print(" ");
+					System.out.print(" | ");
+					continue;
+				}
 				System.out.print(get_elem(i, j));
-				System.out.print(" ");
+				System.out.print(" | ");
 			}
 			System.out.println("");
 		}
