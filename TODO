@@ -1,8 +1,6 @@
-	☐	insert should insert new rows if user wants to. 
+	✔	insert should insert new rows if user wants to. @done (17-12-12 20:41)
+			✔	Need to take care of empty spaces if row or col added. @done (17-12-12 20:41)
 
-			☐	Need to take care of empty spaces if row or col added. 
-						☐	New method. If b is equal to the size of the rows (b == row.size) it will create another row. The oposite for a. APAGAR DEPOIS
-					Currently they are null. Don't know if keep it like this is a good idea.
 	☐	Save table in file.
 
 	✔	Able to create tables from start. @done (17-12-10 15:26)
