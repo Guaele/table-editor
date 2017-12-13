@@ -7,7 +7,7 @@ public class App{
 			if(aux.equals("-help") || aux.equals("-h")){
 				System.out.println("----  USAGE  ---- ");
 				System.out.println("java App [filename || -h || -help]");
-				System.out.println("---- COMMAND ----\ninsert [1-n] [1-n] String \nremove [1-n] [1-n] String\n print \n ePrint [1-n] [1-n]");
+				System.out.println("---- COMMAND ----\ninsert [1-n] [1-n] String \nremove [1-n] [1-n] String\n print \n ePrint [1-n] [1-n] \n load[filename] \n save[filename]");
 				System.out.println("exit");
 			
 

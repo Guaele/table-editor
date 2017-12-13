@@ -5,6 +5,7 @@ This is a simple table-editor.
 
 You can print the table, insert or remove elements from it.
 
+You can load and save in files too.
 
 # How to use
 
