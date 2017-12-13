@@ -156,6 +156,39 @@ public class Table{
 	}
 	private String get_elem(int a, int b){
 		String[][] aux = get_table();
-		return aux[a][b];
+		String s = aux[a][b];
+		if( s == null )
+			return " ";
+		return s;
+	}
+	public void save(String s){
+		String text = "";
+		String aux = "";
+		for(int i = 0; i < get_row(); i++){
+			for(int j = 0; j < get_col(); j++){
+				if(get_elem(i, j) == null){
+					text += " ";
+					continue;
+				}
+				if(j < get_col()-1)
+					text += get_elem(i, j) + ", ";
+				else
+					text += get_elem(i, j);
+			}
+			text += "|\n";
+		}
+	
+		
+		System.out.println(text);
+		try{
+			FileWriter fw = new FileWriter(s.trim());
+			BufferedWriter bw = new BufferedWriter(fw);
+			bw.write(text);
+			bw.close();
+		}catch(Exception e){
+			e.printStackTrace();
+		}	
+
+
 	}
 }

@@ -32,6 +32,7 @@ public class App{
 				}
 				if(temp.equals("load")) t = Table.table_init_from_file(in.nextLine());
 				if(temp.equals("create")) t = new Table(in.nextInt(), in.nextInt());
+				if(temp.equals("save")) t.save(in.nextLine());
 				if(temp.equals("exit")) System.exit(0);
 				
 
